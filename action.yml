@@ -1,23 +1,26 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: signed-commit-action
+description: An action that creates signs commits
+author: Jan-Otto Kröpke
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: heart
-  color: red
+  icon: key
+  color: orange
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  token:
+    description: 'GitHub token'
     required: true
-    default: '1000'
+  commit_message:
+    description: 'Commit message'
+    required: true
+  target_branch:
+    description: 'Branch to commit to'
+    required: true
 
 # Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+outputs: {}
 
 runs:
   using: node20
